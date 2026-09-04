@@ -17,6 +17,9 @@ export const pages = pgTable('pages', {
 export const elements = pgTable('elements', {});
 
 export const relations = defineRelations({ projects, pages }, (r) => ({
+	projects: {
+		pages: r.many.pages()
+	},
 	pages: {
 		projects: r.one.projects({
 			from: r.pages.project_id,
