@@ -81,8 +81,10 @@
 			{/if}
 			{#if editorState.mode === 'normal'}
 				<form style:display={showAdd ? 'unset' : 'none'}>
-					<label>Tag:</label>
-					<input type="text" bind:value={addTag} bind:this={addInput} />
+					<label
+						>Tag:
+						<input type="text" bind:value={addTag} bind:this={addInput} />
+					</label>
 					<input type="submit" value="Create" onclick={() => createNew(slot)} />
 				</form>
 				<div style:display={showAdd ? 'none' : 'contents'}>
